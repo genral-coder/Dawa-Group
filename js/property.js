@@ -115,7 +115,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.getElementById("mainNav");
   window.addEventListener("scroll", () => nav.classList.toggle("scrolled", window.scrollY > 60));
 
+  const burger = document.getElementById("burger");
+  const navList = document.getElementById("navList");
+  if (burger && navList) {
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("open");
+      navList.classList.toggle("active");
+    });
+    navList.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", () => {
+        burger.classList.remove("open");
+        navList.classList.remove("active");
+      })
+    );
+  }
+
   const topbtn = document.getElementById("topbtn");
+  window.onscroll = () => {
+    if (topbtn) topbtn.style.display = window.scrollY > 800 ? "block" : "none";
+  };
   if (topbtn) {
     topbtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
   }
