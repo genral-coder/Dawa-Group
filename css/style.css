@@ -888,7 +888,7 @@ nav.scrolled {
   align-items: center;
   color: white;
   width: 100%;
-  padding: 9rem 0;
+  padding: 9rem 0 12rem;
   position: relative;
   overflow: hidden;
 }
@@ -898,6 +898,9 @@ nav.scrolled {
   max-width: 60rem;
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .service-section .content .tag {
@@ -925,19 +928,24 @@ nav.scrolled {
 }
 
 .service-section .content .btn {
-  width: 18.75rem;
-  height: 4.5rem;
-  margin-top: 3.5rem;
-  border-radius: 1rem;
-  color: white;
-  font-size: 1.6rem;
+  display: inline-block;
+  margin-top: 4.5rem;
+  margin-bottom: 2.5rem;
+  padding: 1.15rem 3.2rem;
+  border-radius: 3rem;
+  color: #000;
+  font-size: 1.25rem;
   font-weight: 700;
+  letter-spacing: 0.5px;
   border: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(90deg, var(--gold-light), var(--gold-deep));
+  box-shadow: 0 10px 30px rgba(0, 168, 204, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .service-section .content .btn:hover {
-  transform: translateY(-4px) scale(1.03);
+  transform: translateY(-5px) scale(1.04);
+  box-shadow: 0 18px 45px rgba(0, 168, 204, 0.4);
 }
 
 /* real estate */
@@ -2004,8 +2012,7 @@ footer {
 
   .service-section .content .btn {
     font-size: 1.1rem;
-    width: 12rem;
-    height: 3.4rem;
+    padding: 1rem 2.4rem;
   }
 
   .slider-item {
